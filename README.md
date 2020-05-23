@@ -93,6 +93,18 @@ localhost:<P1>
 ```
 Where, ```<P1>``` is the same port as selected before.
 
-
+If your browser opens a page like this,
 <img src="./Images/3.jpeg">
 
+You will need to type in the token that you got when you did ```jupyter-notebook &```.
+I the last line of the output of ```jupyter-notebook &``` you would have gotten something like,
+```
+    Or copy and paste one of these URLs:
+        http://localhost:8889/?token=54e5be96e1ea325ea37a6edd4d061870244736e1557747b0
+```
+
+copy the token, in this case ```54e5be96e1ea325ea37a6edd4d061870244736e1557747b0```, and paste it in the space for token in the webpage.
+
+Now, the jupyter-notebook should be open in your browser, and you can use it as if it was on your local machine, but it can only access the files on the remote server.
+
+Happy coding!!!
