@@ -108,3 +108,7 @@ copy the token, in this case ```54e5be96e1ea325ea37a6edd4d061870244736e1557747b0
 Now, the jupyter-notebook should be open in your browser, and you can use it as if it was on your local machine, but it can only access the files on the remote server.
 
 Happy coding!!!
+
+~ Chaitanya Kharyal
+
+~ Anurag Sahu
