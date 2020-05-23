@@ -4,7 +4,7 @@ Have you, like us all, ever been forced to use Colab even when you had credentia
 We all have tolerated the large uploading time and data requirements of colab simply because the jupyter-notebooks are elegant. But what if you had a way to run jupyter-notebook on your server?
 
 ### Install Anaconda
-First you should have get the Anaconda Installer for Linux, you can go and download the installer file from the official Repository. And then ypu need to intall Anaconda<br>
+First you should get the Anaconda Installer for Linux, you can go and download the installer file from the official Repository. And then you need to intall Anaconda<br>
 The link gets updated from time to time you should check https://www.anaconda.com/products/individual#linux for updated links.
 ```
 $ wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
