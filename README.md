@@ -94,7 +94,7 @@ localhost:<P1>
 Where, ```<P1>``` is the same port as selected before.
 
 If your browser opens a page like this,
-<img src="./Images/3.jpeg">
+<img src="./Images/3.jpeg"  width="509" height="500"><br>
 
 You will need to type in the token that you got when you did ```jupyter-notebook &```.
 I the last line of the output of ```jupyter-notebook &``` you would have gotten something like,
