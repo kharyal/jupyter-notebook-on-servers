@@ -21,15 +21,7 @@ $ salloc -c 1 --gres=gpu:1 --time=1-00:00:00
 
 The number of CPUs, GPUs and time can change according to your needs.
 The output should be something like this,
-
-```
-salloc: Pending job allocation 151368
-salloc: job 151368 queued and waiting for resources
-salloc: job 151368 has been allocated resources
-salloc: Granted job allocation 151368
-salloc: Waiting for resource configuration
-salloc: Nodes gnode11 are ready for job
-```
+<img src = "./Images/2.png">
 
 In this case,I have been allocated ```gnode11```. SSH into allocated node, you can get a different gnode allocated, The node number is displayed on the last line of salloc, like ```salloc : Nodes gnode<nodenumber> are ready for job```.
 
@@ -69,24 +61,8 @@ Here ```&``` makes the process run in the background, This is necessary because 
 $ jupyter-notebook &
 ```
 The output to this should be something like,
-```
-[2] 23874
-(base) anurag.sahu@gnode11:~$ [I 00:33:13.568 NotebookApp] The port 8888 is already in use, trying another port.
-[I 00:33:13.768 NotebookApp] JupyterLab extension loaded from /home/anurag.sahu/anaconda3/lib/python3.7/site-packages/jupyterlab
-[I 00:33:13.768 NotebookApp] JupyterLab application directory is /home/anurag.sahu/anaconda3/share/jupyter/lab
-[I 00:33:13.770 NotebookApp] Serving notebooks from local directory: /home/anurag.sahu
-[I 00:33:13.770 NotebookApp] The Jupyter Notebook is running at:
-[I 00:33:13.770 NotebookApp] http://localhost:8889/?token=54e5be96e1ea325ea37a6edd4d061870244736e1557747b0
-[I 00:33:13.770 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 00:33:40.260 NotebookApp] 
-    
-    To access the notebook, open this file in a browser:
-        file:///home/anurag.sahu/.local/share/jupyter/runtime/nbserver-23874-open.html
-    Or copy and paste one of these URLs:
-        http://localhost:8889/?token=54e5be96e1ea325ea37a6edd4d061870244736e1557747b0
+<img src="./Images/1.png">
 
-
-```
 Note that the notebook is running on port ```8889``` on the remote server, this might change everytime you run the command based on the availability of the ports.
 Now, in order to open the notebook in the local machine's browser, you need the server's port on which the notebook is running, ```8889``` in this case, to talk to some port on the local machine. 
 For this, you will need to SSH from the remote server to your local machine
@@ -118,5 +94,5 @@ localhost:<P1>
 Where, ```<P1>``` is the same port as selected before.
 
 
-
+<img src="./Images/3png">
 
