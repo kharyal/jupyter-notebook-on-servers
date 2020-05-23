@@ -94,5 +94,5 @@ localhost:<P1>
 Where, ```<P1>``` is the same port as selected before.
 
 
-<img src="./Images/3png">
+<img src="./Images/3.png">
 
