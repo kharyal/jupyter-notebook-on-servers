@@ -7,8 +7,8 @@ We all have tolerated the large uploading time and data requirements of colab si
 First you should have get the Anaconda Installer for Linux, you can go and download the installer file from the official Repository. And then ypu need to intall Anaconda<br>
 The link gets updated from time to time you should check https://www.anaconda.com/products/individual#linux for updated links.
 ```
-wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
-bash ./Anaconda3-2020.02-Linux-x86_64.sh
+$ wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+$ bash ./Anaconda3-2020.02-Linux-x86_64.sh
 ```
 ### Make Conda environment
 
@@ -16,7 +16,7 @@ bash ./Anaconda3-2020.02-Linux-x86_64.sh
 
 If you are working on ADA, before creating an environment, you must first get memory allocation from the server. For this we recommend getting an interactive sesion using salloc.
 ```
-salloc -c 1 --gres=gpu:1 --time=1-00:00:00
+$ salloc -c 1 --gres=gpu:1 --time=1-00:00:00
 ```
 
 The number of CPUs, GPUs and time can change according to your needs.
