@@ -7,8 +7,8 @@ We all have tolerated the large uploading time and data requirements of colab si
 First you should get the Anaconda Installer for Linux, you can go and download the installer file from the official Repository. And then you need to intall Anaconda<br>
 The link gets updated from time to time you should check https://www.anaconda.com/products/individual#linux for updated links.
 ```
-$ wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
-$ bash ./Anaconda3-2020.02-Linux-x86_64.sh
+wget https://repo.anaconda.com/archive/Anaconda3-2020.02-Linux-x86_64.sh
+bash ./Anaconda3-2020.02-Linux-x86_64.sh
 ```
 ### Make Conda environment
 
@@ -16,7 +16,7 @@ $ bash ./Anaconda3-2020.02-Linux-x86_64.sh
 
 If you are working on ADA, before creating an environment, you must first get memory allocation from the server. For this we recommend getting an interactive sesion using salloc.
 ```
-$ salloc -c 1 --gres=gpu:1 --time=1-00:00:00
+salloc -c 1 --gres=gpu:1 --time=1-00:00:00
 ```
 
 The number of CPUs, GPUs and time can change according to your needs.
@@ -26,7 +26,7 @@ The output should be something like this,
 In this case,I have been allocated ```gnode11```. SSH into allocated node, you can get a different gnode allocated, The node number is displayed on the last line of salloc, like ```salloc : Nodes gnode<nodenumber> are ready for job```.
 
 ```
-$ ssh -X gnode11
+ssh -X gnode11
 ```
 
 Once, you have SSHed into the node, you can continue creating the conda environment.
@@ -49,7 +49,7 @@ conda activate yourenv
 
 Install notebook to your conda environment using,
 ```
-$ conda install -c conda-forge notebook
+conda install -c conda-forge notebook
 ```
 
 ##### Running the notebook on the remote server
@@ -58,7 +58,7 @@ Once notebook has been installed to your conda environment, you can run jupyter-
 Here ```&``` makes the process run in the background, This is necessary because we need to ssh the notebook into our local computer so dont ignore it.
 
 ```
-$ jupyter-notebook &
+jupyter-notebook &
 ```
 The output to this should be something like,
 <img src="./Images/1.png">
@@ -68,19 +68,19 @@ Now, in order to open the notebook in the local machine's browser, you need the 
 For this, you will need to SSH from the remote server to your local machine
 
 ```
-$ ssh -N -f -R <P1>:localhost:<P2> username@your_ip
+ssh -N -f -R <P1>:localhost:<P2> username@your_ip
 ```
 
 Where, ```<P1>``` is the port of the local machine on which you want to run the notebook, eg. ```8891```, and ```<P2>``` is the port of the server on which the notebook is currently running.
 
 For example,
 ```
-$ ssh -N -f -R 8891:localhost:8889 username@your_ip
+ssh -N -f -R 8891:localhost:8889 username@your_ip
 ```
 
 ```username``` is your username on local machine. One question that still remains is how to get ```your_ip```. For that run,
 ```
-$ ifconfig
+ifconfig
 ```
 
 under ```tun0```, after ```inet``` you will see something like ```10.x.x.x```. This is ```your_ip```
