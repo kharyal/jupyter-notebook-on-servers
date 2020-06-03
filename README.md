@@ -45,6 +45,19 @@ conda activate yourenv
 ```
 
 ### The Endgame: Starting the jupyter-notebook
+##### Install ssh in your local system
+goto your local terminal and type
+```
+sudo service ssh status
+```
+if this show some error like ``` ssh.service not found```, then you have to install the ssh.serice and then start it if it's not already started, you can do this by
+```
+sudo apt-get install openssh-client openssh-server
+sudo service ssh start
+```
+and now if you check the ssh status it should be active and show the output like 
+*Insert Image
+
 ##### Installing notebook
 
 Install notebook to your conda environment using,
@@ -72,7 +85,7 @@ ssh -N -f -R <P1>:localhost:<P2> username@your_ip
 ```
 
 Where, ```<P1>``` is the port of the local machine on which you want to run the notebook, eg. ```8891```, and ```<P2>``` is the port of the server on which the notebook is currently running.
-
+Note : You need run this command in the gnode terminal only not your local terminal.
 For example,
 ```
 ssh -N -f -R 8891:localhost:8889 username@your_ip
