@@ -56,7 +56,7 @@ sudo apt-get install openssh-client openssh-server
 sudo service ssh start
 ```
 and now if you check the ssh status it should be active and show the output like 
-*Insert Image
+<img src="./Images/4.png">
 
 ##### Installing notebook
 
