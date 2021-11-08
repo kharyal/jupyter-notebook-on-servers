@@ -50,7 +50,7 @@ goto your local terminal and type
 ```
 sudo service ssh status
 ```
-if this show some error like ``` ssh.service not found```, then you have to install the ssh.serice and then start it if it's not already started, you can do this by
+if this shows some error like ``` ssh.service not found```, then you have to install the ssh.service and then start it if it's not already started, you can do this by
 ```
 sudo apt-get install openssh-client openssh-server
 sudo service ssh start
